@@ -5,9 +5,15 @@
 // 34, 5 -> не кратно, остаток 4
 // 16, 4 -> кратно
 
-Console.Write("Введите первое число: ");
-int firstNumber = Convert.Toint32(Console.ReadLine());
-Console.Write("Введите второе число: ");
-int secondNumber = Convert.Toint32(Console.ReadLine());
-
-int 
+int Remainder(int firstPar, int secondPar) 
+{ 
+return firstPar % secondPar; 
+} 
+Console.Write("Введите первое число: "); 
+int firstNumber = Convert.ToInt32(Console.ReadLine()); 
+Console.Write("Введите второе число: "); 
+int secondNumber = Convert.ToInt32(Console.ReadLine()); 
+int remainder = Remainder(firstNumber, secondNumber); 
+if (remainder == 0) 
+Console.WriteLine("кратно"); 
+else Console.WriteLine($"не кратно, остаток {remainder}");
