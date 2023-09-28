@@ -19,6 +19,6 @@ Console.WriteLine("Введите целое положительное числ
 int number = Convert.ToInt32(Console.ReadLine());
 
 int sumNumbers = SumNumbers(number);
-Console.WriteLine($"Сумма цифр в числе {number} = {sumNumbers}");
+Console.WriteLine($"Сумма цифр в числе {number} - > {sumNumbers}");
 
 
