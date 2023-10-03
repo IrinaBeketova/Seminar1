@@ -3,10 +3,10 @@
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
-int Prompt(string message)
+int Assistant(string note)
 {
-    System.Console.Write(message);
-    string ReadInput = System.Console.ReadLine();
+    Console.Write(note);
+    string ReadInput = Console.ReadLine();
     int result = int.Parse(ReadInput);
     return result;
 }
@@ -18,23 +18,23 @@ int[] CreateArray(int Length, int minVaiue, int maxValue)
     for (int i = 0; i < Length; i++)
     {
         array[i] = rnd.Next(minVaiue, maxValue + 1);
+        Console.Write($"{array[i]}, ");
     }
     return array;
 }
-
 void PrintArray(int[] array)
 {
-    System.Console.Write("[");
+    Console.Write(" -> [");
     for (int i = 0; i < array.Length - 1; i++)
     {
-        System.Console.Write($"{array[i]}, ");
+        Console.Write($"{array[i]}, ");
     }
-System.Console.Write($"{array[array.Length - 1]}");
-System.Console.WriteLine("]");
+    Console.Write($"{array[array.Length - 1]}");
+    Console.WriteLine("]");
 }
 
-int length = Prompt("Длина массива: ");
-int min = Prompt("Начальное значение: ");
-int max = Prompt("Конечное значение: ");
-int[] arr = CreateArray(length, min, max);
-PrintArray(arr);
+int length = Assistant("Длина массива: ");
+int min = Assistant("Начальное значение: ");
+int max = Assistant("Конечное значение: ");
+int[] array = CreateArray(length, min, max);
+PrintArray(array);
