@@ -1,8 +1,7 @@
 ﻿// Задача 41. Пользователь вводит с клавиатуры М чисел.
 //Посчтитайте, сколько чисел больше 0 ввёл пользователь.
 
-
-Console.WriteLine("Введите число - размер массива");
+Console.WriteLine("Задайте размер массива");
 int arrsize = Convert.ToInt32(Console.ReadLine());
 
 int[] array = new int[arrsize];
@@ -11,7 +10,7 @@ void Massif(int arrsize)
 {
     for (int i = 0; i < arrsize; i++)
     {
-        Console.WriteLine($"Введите {i + 1} элемент массива");
+        Console.WriteLine($"Введите {i + 1} элемент массива, любое целое число");
         array[i] = Convert.ToInt32(Console.ReadLine());
     }
 }
